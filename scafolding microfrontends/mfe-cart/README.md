@@ -1,0 +1,2 @@
+# mfe-cart
+cart microfrontend

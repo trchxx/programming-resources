@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2015", // Compilar a ES2015 para asegurar compatibilidad con los navegadores modernos.
+    "module": "ESNext", // Usar módulos ES para que sea compatible con sistemas modernos de bundling.
+    "moduleResolution": "node", // Resolución de módulos compatible con Node.js y el entorno de desarrollo.
+    "jsx": "react-jsx", // Habilitar JSX en React
+    "esModuleInterop": true, // Facilitar la interoperabilidad de los módulos ES
+    "strict": true, // Habilitar las reglas estrictas de TS
+    "skipLibCheck": true, // Omite la comprobación de bibliotecas para mejorar la velocidad de compilación
+    "declaration": true, // Generar los archivos `.d.ts` para exportar los tipos
+    "declarationDir": "dist/types", // Los tipos se guardarán en este directorio
+    "outDir": "dist", // Los archivos JavaScript generados se guardarán aquí
+    "sourceMap": true, // Generar mapas de fuente
+    "allowJs": true, // Permitir la entrada de archivos JS (en caso de que haya archivos JS que quieras compilar)
+    "noEmit": false, // Asegúrate de que TypeScript emita los archivos generados
+    "skipDefaultLibCheck": true, // Omite la comprobación de los archivos de las bibliotecas predeterminadas
+    "lib": ["dom", "esnext"] // Especificar las bibliotecas que necesitas
+  },
+  "include": ["src/**/*"], // Incluir todos los archivos de la carpeta src
+  "exclude": ["node_modules", "dist"] // Excluir node_modules y dist para no compilar esos archivos
+}

@@ -1,0 +1,32 @@
+services:
+  ms-gateway:      
+    build:
+      context: ./ms-gateway
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - ms-pdv
+    networks:
+      - gowid_back_network
+    env_file:
+      - ./ms-gateway/.env.docker
+  ms-pdv:
+    build:
+      context: ./ms-pdv
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    networks:
+      - gowid_back_network
+  ms-login:  
+    build:    
+      context: ./ms-login 
+      dockerfile: Dockerfile 
+    ports: 
+      - 3002:3002
+    networks:
+      - gowid_back_network   
+networks:
+  gowid_back_network:
+    driver: bridge
